@@ -47,7 +47,7 @@ resource "aws_redshift_cluster" "redshift" {
 
 # Create S3 Read only access role. This is assigned to Redshift cluster so that it can read data from S3
 resource "aws_iam_role" "redshift_role" {
-  name = "RedShiftLoadRole-3"
+  name = "RedShiftLoadRole-2"
   managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"]
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
