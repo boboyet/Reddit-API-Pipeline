@@ -18,7 +18,7 @@ provider "aws" {
 resource "aws_redshift_cluster" "redshift" {
   cluster_identifier = "redshift-cluster-pipeline"
   skip_final_snapshot = true # must be set so we can destroy redshift with terraform destroy
-  master_username    = "oasis"
+  master_username    = "oasisman"
   master_password    = var.db_password
   node_type          = "dc2.large"
   cluster_type       = "single-node"
@@ -31,6 +31,7 @@ resource "aws_redshift_cluster" "redshift" {
 # Confuge security group for Redshift allowing all inbound/outbound traffic
  resource "aws_security_group" "sg_redshift" {
   name        = "sg_redshift"
+
   ingress {
     from_port       = 0
     to_port         = 0
@@ -47,7 +48,7 @@ resource "aws_redshift_cluster" "redshift" {
 
 # Create S3 Read only access role. This is assigned to Redshift cluster so that it can read data from S3
 resource "aws_iam_role" "redshift_role" {
-  name = "RedShiftLoadRole-2"
+  name = "RedShiftLoadRole-8"
   managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"]
   assume_role_policy = jsonencode({
     Version = "2012-10-17"

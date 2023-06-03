@@ -7,11 +7,11 @@ variable "db_password" {
 variable "s3_bucket" {
   description = "Bucket name for S3"
   type        = string
-  default     = "reddit-bucket"
+  default     = "onelake"
 }
 
 variable "aws_region" {
   description = "Region for AWS"
   type        = string
-  default     = "us-east-2"
+  default     = "us-east-1"
 }
