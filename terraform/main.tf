@@ -18,7 +18,7 @@ provider "aws" {
 resource "aws_redshift_cluster" "redshift" {
   cluster_identifier = "redshift-cluster-pipeline"
   skip_final_snapshot = true # must be set so we can destroy redshift with terraform destroy
-  master_username    = "oasisman"
+  master_username    = ""
   master_password    = var.db_password
   node_type          = "dc2.large"
   cluster_type       = "single-node"
