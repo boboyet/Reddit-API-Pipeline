@@ -1,7 +1,7 @@
 # Building a Reddit-ETL-Pipeline wtih Terraform, Airflow, Docker, and  dbt.
 
 ## Overview
-This project is a proof of concept for building a data pipeline using Terraform, Airflow, Docker, and dbt. The pipeline will extract data from the Reddit API, transform the data using dbt, and load the data into a Redshift Datawarehouse. The pipeline will be deployed to AWS using Terraform and Docker, and monitored using Airflow.
+This project is a proof of concept for building a data pipeline using Terraform, Airflow, Docker, and dbt. The pipeline will extract data from the Reddit API, transform the data using dbt, and load the data into a Redshift Datawarehouse. The pipeline will be deployed to AWS using Terraform and Docker, and monitored using Airflow. The data will be visualized using Tableau, or Google Data Studio.
 
 ---
 ## Architecture
@@ -14,7 +14,7 @@ This project is a proof of concept for building a data pipeline using Terraform,
 1. Load into [AWS S3](https://aws.amazon.com/s3/)
 1. Copy into [AWS Redshift](https://aws.amazon.com/redshift/)
 1. Transform using [dbt](https://www.getdbt.com)
-1. Create [PowerBI](https://powerbi.microsoft.com/en-gb/) or [Google Data Studio](https://datastudio.google.com) Dashboard 
+1. Create [Tableau](https://www.tableau.com) Dashboard or [Google Data Studio](https://datastudio.google.com) Report.
 1. Orchestrate with [Airflow](https://airflow.apache.org) in [Docker](https://www.docker.com)
 1. Create AWS resources with [Terraform](https://www.terraform.io)
 ---
